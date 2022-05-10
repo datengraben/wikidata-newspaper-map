@@ -18,6 +18,7 @@ jobs:
       run: |-
         make
     - name: Determine if upload data has changed
+      run: |-
         git diff --exit-code ./nuts-merged-count.csv
         CHANGED=$?
     - name: Commit and push if it changed
@@ -29,6 +30,7 @@ jobs:
         git commit -m "Latest data: ${timestamp}" || exit 0
         git push
     - name: Upload changed data
+      run: |-
         [[ $CHANGED -eq 1 ]] && python upload-datawrapper.py || echo Nothing changed
 
     
