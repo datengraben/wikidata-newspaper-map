@@ -48,7 +48,13 @@ DEA53,Hagen,1
 DEC01,Regionalverband Saarbrücken,1
 DED21,Dresden,1
 DED51,Leipzig,1
-DEE09,Landkreis Harz,1
+DEE03,Magdeburg,1
+DEE04,Altmarkkreis Salzwedel,1
+DEE05,Landkreis Anhalt-Bitterfeld,1
+DEE06,Landkreis Jerichower Land,1
+DEE07,Landkreis Börde,1
+DEE0C,Salzlandkreis,1
+DEE0D,Landkreis Stendal,1
 DEF01,Flensburg,1
 DEF02,Kiel,1
 DEF03,Lübeck,1
@@ -69,6 +75,7 @@ DE721,Landkreis Gießen,2
 DE913,Wolfsburg,2
 DE914,Landkreis Gifhorn,2
 DEA2D,Städteregion Aachen,2
+DEE09,Landkreis Harz,2
 DE112,Landkreis Böblingen,3
 DE711,Darmstadt,3
 DE212,München,4
