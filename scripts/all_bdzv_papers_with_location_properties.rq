@@ -1,0 +1,27 @@
+SELECT DISTINCT
+  ?zeitung ?zeitungLabel ?pop ?popLabel ?nuts
+  
+  WHERE {
+    ?zeitung wdt:P31/wdt:P279* wd:Q11032 , ?zeitungart . # /wdt:P279*
+    ?zeitung wdt:P463 wd:Q1008861 .
+    { ?zeitung wdt:P276/wdt:P131* ?pop 
+     } UNION
+    { ?zeitung wdt:P159/wdt:P131* ?pop .
+     } UNION
+    { ?zeitung wdt:P291/wdt:P131* ?pop. # headquarter, place of publication (P291)
+     } UNION {
+    ?zeitung wdt:P1071/wdt:P131* ?pop. # headquarter, place of publication (P291)
+     }
+    ?pop p:P605 ?nutsStatement.
+    # Get value from nuts stm
+    ?nutsStatement ps:P605 ?nuts . # Dont change this, statement usage is important for later MINUS of endTime
+
+    # Only daily and regional newspapers TODO remove daily in the future
+    # FILTER(?zeitungart in (wd:Q11023, wd:Q1110794, wd:Q2138556)).
+    FILTER(strlen(?nuts) = 5 && STRSTARTS(?nuts, "DE")).
+	
+    
+    # Remove not valid nuts references
+    MINUS{ ?nutsStatement pq:P582 ?endtime.   }
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "de,[AUTO_LANGUAGE]". }
+  }
