@@ -1,47 +1,28 @@
 nuts,popLabel,zeitungLabel
-DE111,Stuttgart,2
-DE112,Landkreis Böblingen,3
-DE113,Landkreis Esslingen,2
-DE114,Landkreis Göppingen,2
-DE115,Landkreis Ludwigsburg,2
-DE116,Rems-Murr-Kreis,2
 DE117,Heilbronn,1
 DE118,Landkreis Heilbronn,1
 DE119,Hohenlohekreis,1
 DE123,Landkreis Karlsruhe,1
 DE127,Neckar-Odenwald-Kreis,1
-DE128,Rhein-Neckar-Kreis,2
 DE129,Pforzheim,1
-DE12B,Enzkreis,2
 DE142,Landkreis Tübingen,1
 DE148,Landkreis Ravensburg,1
-DE212,München,4
-DE300,Berlin,10
 DE402,Cottbus,1
-DE404,Potsdam,2
 DE501,Bremen,1
 DE600,Hamburg,1
-DE711,Darmstadt,3
-DE712,Frankfurt am Main,2
 DE713,Offenbach am Main,1
 DE714,Wiesbaden,1
 DE715,Kreis Bergstraße,1
 DE716,Landkreis Darmstadt-Dieburg,1
-DE717,Kreis Groß-Gerau,2
 DE718,Hochtaunuskreis,1
-DE719,Main-Kinzig-Kreis,2
 DE71A,Main-Taunus-Kreis,1
 DE71B,Odenwaldkreis,1
-DE71C,Landkreis Offenbach,2
-DE721,Landkreis Gießen,2
 DE724,Landkreis Marburg-Biedenkopf,1
 DE725,Vogelsbergkreis,1
 DE733,Landkreis Hersfeld-Rotenburg,1
 DE803,Rostock,1
 DE911,Braunschweig,1
 DE912,Salzgitter,1
-DE913,Wolfsburg,2
-DE914,Landkreis Gifhorn,2
 DE917,Landkreis Helmstedt,1
 DE91A,Landkreis Peine,1
 DE91B,Landkreis Wolfenbüttel,1
@@ -59,7 +40,6 @@ DEA13,Essen,1
 DEA19,Solingen,1
 DEA1A,Wuppertal,1
 DEA23,Köln,1
-DEA2D,Städteregion Aachen,2
 DEA33,Münster,1
 DEA37,Kreis Steinfurt,1
 DEA46,Kreis Minden-Lübbecke,1
@@ -73,3 +53,23 @@ DEF01,Flensburg,1
 DEF02,Kiel,1
 DEF03,Lübeck,1
 DEG02,Gera,1
+DE111,Stuttgart,2
+DE113,Landkreis Esslingen,2
+DE114,Landkreis Göppingen,2
+DE115,Landkreis Ludwigsburg,2
+DE116,Rems-Murr-Kreis,2
+DE128,Rhein-Neckar-Kreis,2
+DE12B,Enzkreis,2
+DE404,Potsdam,2
+DE712,Frankfurt am Main,2
+DE717,Kreis Groß-Gerau,2
+DE719,Main-Kinzig-Kreis,2
+DE71C,Landkreis Offenbach,2
+DE721,Landkreis Gießen,2
+DE913,Wolfsburg,2
+DE914,Landkreis Gifhorn,2
+DEA2D,Städteregion Aachen,2
+DE112,Landkreis Böblingen,3
+DE711,Darmstadt,3
+DE212,München,4
+DE300,Berlin,10
