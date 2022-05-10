@@ -4,6 +4,14 @@ import requests
 import os
 import json
 import sys
+from functools import reduce
+from datetime import datetime
+
+def iferror(resp):
+    if resp.status_code >= 400:
+        print(resp)
+        print(resp.text)
+        sys.exit(1)
 
 DW_TOKEN=os.getenv("DW_TOKEN")
 
@@ -12,8 +20,6 @@ if DW_TOKEN is None:
     sys.exit(1)
 
 CHART_ID="1TwrU"
-#print(DW_TOKEN)
-#import sys
 
 #sys.exit(0)
 # Check
@@ -23,13 +29,9 @@ URL=f"""https://api.datawrapper.de/v3/charts/{CHART_ID}"""
 dw_response = requests.get(URL, headers={
     'Authorization': f"""Bearer {DW_TOKEN}"""
 })
-
-#print(dw_response)
-#print(dw_response.text)
+iferror(dw_response)
 
 csv_file = "./nuts-merged-count.csv"
-
-from functools import reduce
 
 data = reduce(lambda a, b: a + b, open(csv_file, 'rb').readlines())
 
@@ -43,14 +45,12 @@ dw_response = requests.put(URL, data, headers={
     'Content-Type': 'text/csv',
     "Accept": "*/*"
 })
+iferror(dw_response)
 
-#print(dw_response)
-#print(dw_response.text)
 
 # Update timestamp
 print("-- 03 Update timestamp")
 url = f"""https://api.datawrapper.de/v3/charts/{CHART_ID}"""
-
 
 headers = {
     "Accept": "*/*",
@@ -58,13 +58,10 @@ headers = {
     'Authorization': f"""Bearer {DW_TOKEN}"""
 }
 
-from datetime import datetime
 actual_time = datetime.now().strftime("%H:%M:%S %d.%m.%Y")
 payload = {"metadata": {"language": "de-DE", "annotate": {"notes": f"""Zuletzt aktualisiert: {actual_time}"""}}}
-response = requests.request("PATCH", url, json=payload, headers=headers)
-
-#print(response)
-#print(response.text)
+dw_response = requests.request("PATCH", url, json=payload, headers=headers)
+iferror(dw_response)
 
 # publish
 print("-- 04 Publish chart")
@@ -75,8 +72,7 @@ headers = {
     'Authorization': f"""Bearer {DW_TOKEN}"""
 }
 response = requests.request("POST", URL, headers=headers)
-###print(response)
-#print(response.text)
+iferror(dw_response)
 
 print(json.loads(response.text)['url'])
 print("Published")
