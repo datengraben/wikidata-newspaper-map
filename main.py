@@ -206,12 +206,12 @@ if __name__ == '__main__':
             print("-> No changelog")
 
     if not arguments['--dry-run']:
-        result.to_csv('zeitungen-mit-nuts.csv')
+        result.sort_values(by=['zeitungLabel', 'nuts']).to_csv('zeitungen-mit-nuts.csv')
 
     result_count = result[['zeitungLabel', 'nuts', 'popLabel']].groupby(['nuts', 'popLabel']).count()
     
     if not arguments['--dry-run']:
-        result_count.to_csv('nuts-merged-count.csv')
+        result_count.sort_values(by=['zeitungLabel', 'nuts']).to_csv('nuts-merged-count.csv')
     #print(result)
 
     if not arguments['--quiet']:
