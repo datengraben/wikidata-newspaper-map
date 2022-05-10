@@ -19,7 +19,7 @@ jobs:
         make
     - name: Determine if upload data has changed
       run: |-
-        git diff --exit-code ./nuts-merged-count.csv
+        true || git diff --exit-code ./nuts-merged-count.csv
         CHANGED=$?
     - name: Commit and push if it changed
       run: |-
