@@ -13,7 +13,7 @@ jobs:
     - name: Check out this repo
       uses: actions/checkout@v2
     - name: Prepare
-      run: pip install -e .
+      run: pip install -r requirements.txt
     - name: Fetch latest data and create csv
       run: |-
         make
