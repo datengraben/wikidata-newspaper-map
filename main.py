@@ -206,7 +206,7 @@ if __name__ == '__main__':
             print("-> No changelog")
 
     if not arguments['--dry-run']:
-        result.sort_values(by=['zeitungLabel', 'nuts']).to_csv('zeitungen-mit-nuts.csv')
+        result.sort_values(by=['zeitungLabel', 'nuts']).to_csv('zeitungen-mit-nuts.csv', index=False)
 
     result_count = result[['zeitungLabel', 'nuts', 'popLabel']].groupby(['nuts', 'popLabel']).count()
     
