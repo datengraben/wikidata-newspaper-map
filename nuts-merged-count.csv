@@ -40,6 +40,8 @@ DEA13,Essen,1
 DEA19,Solingen,1
 DEA1A,Wuppertal,1
 DEA23,Köln,1
+DEA28,Kreis Euskirchen,1
+DEA2B,Rheinisch-Bergischer Kreis,1
 DEA2C,Rhein-Sieg-Kreis,1
 DEA33,Münster,1
 DEA37,Kreis Steinfurt,1
@@ -60,6 +62,7 @@ DEE0D,Landkreis Stendal,1
 DEF01,Flensburg,1
 DEF02,Kiel,1
 DEF03,Lübeck,1
+DEF0B,Kreis Rendsburg-Eckernförde,1
 DEG02,Gera,1
 DE111,Stuttgart,2
 DE113,Landkreis Esslingen,2
