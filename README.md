@@ -3,6 +3,7 @@
 Die Beschreibung in Deutsch folgt hier nach: 
 
     This repository creates an interactive map (with datawrapper.de software) from wikidata csv exports.
+    Geoinformation is derived from the NUTS-Code (EU only) of the relevant regions.
     At the moment this is written in german, because the generated map only reflects german districts and newspapers.
     As soon as the genearation also creates maps for non-german speaking countries I will add an english description.
 
