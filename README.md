@@ -10,6 +10,8 @@ Die Beschreibung in Deutsch folgt hier nach:
 Blog: https://datengraben.com/posts/2022-05-05-wikidata-datawrapper-regionalzeitungen
 
 Diese Karte stellt die Abdeckung von Regionalzeitungen in Deutschland dar, also die Gebiete über welche Sie berichten.
+Die Geoinformationen werden immer für den NUTS3-Code einer Region dargestellt.
+In Deutschland sind NUTS3-Code hauptsächlich Landkreise und kreisfreie Städte.
 
 
 ## Karte erstellen
