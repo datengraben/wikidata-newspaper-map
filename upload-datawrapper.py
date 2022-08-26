@@ -72,7 +72,7 @@ headers = {
     'Authorization': f"""Bearer {DW_TOKEN}"""
 }
 response = requests.request("POST", URL, headers=headers)
-iferror(dw_response)
+iferror(response)
 
 print(json.loads(response.text))
 print("Published")
