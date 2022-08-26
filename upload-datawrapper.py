@@ -74,5 +74,5 @@ headers = {
 response = requests.request("POST", URL, headers=headers)
 iferror(dw_response)
 
-print(json.loads(response.text)['url'])
+print(json.loads(response.text))
 print("Published")
